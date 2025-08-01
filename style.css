@@ -1,0 +1,350 @@
+/* Basic Reset & Font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Example font, similar to template */
+    line-height: 1.6;
+    background-color: #ccc; /* Background for outside the resume */
+    color: #333;
+    font-size: 10pt; /* Base font size */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.resume-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Columns */
+.left-column {
+    background-color: #f2f2f2; /* Light grey sidebar */
+    width: 30%; /* Adjust width as needed */
+    padding: 30px 20px;
+    color: #444; /* Slightly darker text for sidebar */
+}
+
+.right-column {
+    width: 70%; /* Adjust width as needed */
+    padding: 0; /* Padding is handled by sections inside */
+}
+
+/* Left Column Styling */
+.profile-pic-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 150px; /* Adjust size */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff; /* Optional border */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.left-column section {
+    margin-bottom: 25px;
+}
+
+.left-column h2 {
+    text-transform: uppercase;
+    font-size: 11pt;
+    color: #c84d4d; /* Reddish color from template header */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.contact-info ul,
+.interests ul {
+    list-style: none;
+}
+
+.contact-info li,
+.interests li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i,
+.interests i {
+    color: #c84d4d; /* Reddish icon color */
+    margin-right: 10px;
+    width: 20px; /* Ensure alignment */
+    text-align: center;
+}
+
+.contact-info a {
+    color: #444; /* Match sidebar text color */
+    word-break: break-all; /* Prevent long links overflowing */
+}
+.contact-info a:hover {
+    color: #c84d4d;
+}
+
+.skills ul {
+    list-style: none;
+}
+
+.skills li {
+    margin-bottom: 12px;
+}
+
+.skills span {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 9pt;
+}
+
+.skill-bar {
+    background-color: #e0e0e0; /* Light grey bar background */
+    border-radius: 5px;
+    height: 8px;
+    overflow: hidden; /* Important for the inner bar */
+}
+
+.skill-level {
+    background-color: #c84d4d; /* Reddish fill color */
+    height: 100%;
+    border-radius: 5px 0 0 5px; /* Keep rounded corner on left */
+}
+
+/* Right Column Styling */
+.resume-header {
+    background-color: #c84d4d; /* Reddish header */
+    color: #fff;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+}
+
+.resume-header h1 {
+    font-size: 24pt;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.resume-header h2 {
+    font-size: 14pt;
+    margin-bottom: 15px;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+.resume-header p {
+    font-size: 10pt;
+    line-height: 1.5;
+    opacity: 0.95;
+}
+
+.right-column section {
+    padding: 0 40px; /* Horizontal padding for content sections */
+    margin-bottom: 30px;
+}
+
+.right-column h2 {
+    text-transform: uppercase;
+    font-size: 12pt;
+    color: #c84d4d;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f2f2f2; /* Light border */
+    padding-bottom: 8px;
+}
+
+/* Work Experience */
+.job-entry {
+    margin-bottom: 25px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.job-header h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #333;
+}
+
+.date-location {
+    font-size: 9pt;
+    color: #555;
+    white-space: nowrap; /* Prevent wrapping */
+    margin-left: 15px; /* Add space between title and date */
+}
+
+.job-entry ul {
+    list-style: none; /* Use custom bullets */
+    padding-left: 20px; /* Indentation for bullets */
+}
+
+.job-entry li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px; /* Space for the custom bullet */
+}
+
+.job-entry li::before {
+    content: '■'; /* Square bullet like template */
+    color: #c84d4d; /* Reddish bullet color */
+    font-size: 8pt; /* Adjust bullet size */
+    position: absolute;
+    left: 0;
+    top: 1px; /* Adjust vertical alignment */
+}
+
+/* Courses / Certifications / Education */
+.course-entry,
+.education-entry,
+.certification-entry /* Add if needed */ {
+    margin-bottom: 15px;
+}
+
+.course-entry h3,
+.education-entry h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.course-entry h3 a i,
+.certification-entry h3 a i { /* Style for external link icon */
+    font-size: 0.8em; /* Make icon slightly smaller */
+    margin-left: 5px;
+    color: #007bff; /* Link color */
+    opacity: 0.7;
+}
+
+.course-entry p,
+.education-entry p {
+    font-size: 10pt;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+
+/* Responsive adjustments (Basic Example) */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        margin: 10px;
+        width: auto;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+
+    .left-column {
+        padding: 20px;
+    }
+
+    .right-column section,
+    .resume-header {
+        padding: 20px;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .date-location {
+       margin-left: 0;
+       margin-top: 4px;
+    }
+}
+
+/* Add these new styles to the end of your style.css file */
+
+/* Personal Projects Section */
+.personal-projects {
+    padding: 0 40px;
+    margin-bottom: 30px;
+}
+
+.personal-projects h2 {
+    text-transform: uppercase;
+    font-size: 12pt;
+    color: #c84d4d;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 8px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.project-card h3 a {
+    color: #c84d4d;
+    text-decoration: none;
+}
+
+.project-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.project-card h3 i {
+    font-size: 0.8em;
+    margin-left: 6px;
+    opacity: 0.7;
+}
+
+.project-card p {
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Adjustments for the new section in responsive view */
+@media (max-width: 768px) {
+    .personal-projects {
+        padding: 20px;
+    }
+}
